@@ -1,0 +1,66 @@
+/* Card.css */
+
+:root {
+  /* tweak these to quickly change look & feel */
+  --card-bg: #ffffff;
+  --card-radius: 12px;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.14);
+
+  --accent-green: #4caf50;
+  --text-main: #2d2d2d;
+  --text-muted: #58606b;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  width: clamp(260px, 90%, 340px);          /* responsive width */
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.details h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.details p {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-green);
+  margin: 0;
+}
+
+.info {
+  padding: 0 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
