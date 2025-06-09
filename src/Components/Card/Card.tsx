@@ -18,7 +18,7 @@ const Card = ({ companyName, ticker, price}: Props) => {
             <h2>
               {companyName} ({ticker})
             </h2>
-            <p>{price}</p>
+            <p>${price}</p>
         </div>
         <p className='info'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi qui et laudantium consequuntur. Quos voluptatibus, dolorem quidem ullam vel, natus dolor officiis non nemo, a labore hic quibusdam blanditiis iusto.</p>
         </div>
