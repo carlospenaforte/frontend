@@ -7,7 +7,7 @@ interface Props {
   price: number;
 }
 
-const Card = (props: Props) => {
+const Card = ({ companyName, ticker, price}: Props) => {
   return (
     <div className="card">
         <img
@@ -15,8 +15,10 @@ const Card = (props: Props) => {
         alt='image'
         />
         <div className='details'>
-            <h2>AAPL</h2>
-            <p>$110</p>
+            <h2>
+              {companyName} ({ticker})
+            </h2>
+            <p>{price}</p>
         </div>
         <p className='info'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi qui et laudantium consequuntur. Quos voluptatibus, dolorem quidem ullam vel, natus dolor officiis non nemo, a labore hic quibusdam blanditiis iusto.</p>
         </div>
