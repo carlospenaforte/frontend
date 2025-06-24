@@ -1,13 +1,20 @@
 import React, { JSX, useState } from 'react'
 
-type Props = {}
+type Props = {};
 
 const Search : React.FC<Props> = (props: Props) : JSX.Element => {
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState<string>("");
+
+  const onClick = (e: any) => {
+    setSearch(e.target.value);
+    console.log(e);
+  };
 
   return (
-    <div>Search</div>
+    <div>
+      <input value={search} onChange={(e) => onClick(e)}></input>
+    </div>
   )
-}
+};
 
-export default Search
+export default Search;
